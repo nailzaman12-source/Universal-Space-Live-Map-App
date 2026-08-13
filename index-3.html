@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Universal Space Live — explore Earth, space, weather, satellites and disasters in one educational platform.">
+  <title>Universal Space Live</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">🌍</div>
+      <div>
+        <h1>Universal Space Live</h1>
+        <p>Explore Earth • Space • Weather • Satellites</p>
+      </div>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="badge">● LIVE EDUCATIONAL PLATFORM</span>
+        <h2>Explore Our Universe<br><span>in One Place</span></h2>
+        <p>
+          Discover Earth, space, satellites, weather and natural events
+          through an interactive educational dashboard.
+        </p>
+        <div class="hero-actions">
+          <button class="primary-btn" onclick="showSection('dashboard')">🚀 Explore Live</button>
+          <button class="secondary-btn" onclick="showSection('about')">Learn More</button>
+        </div>
+      </div>
+      <div class="earth-card">
+        <div class="earth">🌍</div>
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="star s1">✦</div>
+        <div class="star s2">✧</div>
+        <div class="star s3">✦</div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="section">
+      <div class="section-title">
+        <span>LIVE DASHBOARD</span>
+        <h2>Universal Data Center</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">🌍</div>
+          <h3>Earth</h3>
+          <p>Explore our planet and global regions.</p>
+          <button onclick="openInfo('Earth Explorer')">Open →</button>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">☁️</div>
+          <h3>Weather</h3>
+          <p>Monitor weather information and conditions.</p>
+          <button onclick="openInfo('Weather Center')">Open →</button>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">🛰️</div>
+          <h3>Satellites</h3>
+          <p>Learn about satellites and their missions.</p>
+          <button onclick="openInfo('Satellite Tracker')">Open →</button>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">⚠️</div>
+          <h3>Disasters</h3>
+          <p>Educational view of natural events worldwide.</p>
+          <button onclick="openInfo('Disaster Monitor')">Open →</button>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">🤖</div>
+          <h3>AI Insights</h3>
+          <p>AI-assisted educational analysis of universal data.</p>
+          <button onclick="openInfo('AI Insights')">Open →</button>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">✨</div>
+          <h3>Space</h3>
+          <p>Explore stars, planets and cosmic phenomena.</p>
+          <button onclick="openInfo('Space Explorer')">Open →</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="section-title">
+        <span>ABOUT US</span>
+        <h2>Universal Space Live</h2>
+      </div>
+      <p>
+        Universal Space Live is an educational concept designed to bring
+        Earth and space information together in a simple, mobile-friendly
+        interface. Real-time services and scientific data APIs can be
+        connected in future versions.
+      </p>
+      <div class="notice">
+        <strong>Educational project:</strong>
+        This prototype is for learning, visualization and research.
+        It does not provide weaponized or military functionality.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Universal Space Live</p>
+    <p>Educational • Scientific • Explore</p>
+  </footer>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-box">
+      <button class="close" onclick="closeInfo()">×</button>
+      <h2 id="modalTitle">Universal Space Live</h2>
+      <p id="modalText"></p>
+      <button class="primary-btn" onclick="closeInfo()">OK</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
