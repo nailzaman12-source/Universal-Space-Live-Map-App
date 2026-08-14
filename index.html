@@ -1,1 +1,424 @@
 index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Universal Space Live Map</title>
+
+  <meta name="description"
+        content="Universal Space Live — an AI-powered educational platform for exploring Earth, space, weather, satellites and disasters.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-icon">🌍</div>
+      <div>
+        <h1>Universal Space Live</h1>
+        <span>AI-Powered Space & Earth Explorer</span>
+      </div>
+    </div>
+
+    <button id="menuButton" class="menu-button">☰</button>
+  </header>
+
+
+  <!-- MAIN NAVIGATION -->
+  <nav class="navigation">
+    <button class="nav-btn active" data-section="dashboard">
+      🏠 Dashboard
+    </button>
+
+    <button class="nav-btn" data-section="earth">
+      🌍 Earth
+    </button>
+
+    <button class="nav-btn" data-section="space">
+      🚀 Space
+    </button>
+
+    <button class="nav-btn" data-section="weather">
+      ☁️ Weather
+    </button>
+
+    <button class="nav-btn" data-section="satellites">
+      🛰️ Satellites
+    </button>
+
+    <button class="nav-btn" data-section="disasters">
+      ⚠️ Disasters
+    </button>
+
+    <button class="nav-btn" data-section="ai">
+      🤖 AI
+    </button>
+  </nav>
+
+
+  <!-- DASHBOARD -->
+  <main>
+
+    <section id="dashboard" class="section active">
+
+      <div class="hero">
+        <div>
+          <span class="live-badge">● LIVE EDUCATIONAL PLATFORM</span>
+
+          <h2>
+            Explore Earth,<br>
+            Space & The Universe
+          </h2>
+
+          <p>
+            Universal Space Live brings Earth, space, satellites,
+            weather, disasters and AI-powered educational information
+            together in one platform.
+          </p>
+
+          <button id="exploreButton" class="primary-button">
+            🚀 Explore Universe
+          </button>
+        </div>
+      </div>
+
+
+      <!-- LIVE MAP -->
+      <div class="card map-card">
+
+        <div class="card-header">
+          <div>
+            <h3>🌎 Universal Live Map</h3>
+            <p>Interactive Earth & space visualization</p>
+          </div>
+
+          <span class="status">
+            ● LIVE
+          </span>
+        </div>
+
+        <div id="universeMap" class="universe-map">
+
+          <div class="earth">
+            🌍
+          </div>
+
+          <div class="orbit orbit-1"></div>
+          <div class="orbit orbit-2"></div>
+
+          <div class="satellite satellite-1">
+            🛰️
+          </div>
+
+          <div class="satellite satellite-2">
+            🛰️
+          </div>
+
+          <div class="map-label">
+            UNIVERSAL SPACE LIVE
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- INFORMATION CARDS -->
+      <div class="dashboard-grid">
+
+        <div class="info-card">
+          <div class="info-icon">🌍</div>
+          <h3>Earth</h3>
+          <p>Explore our planet and global environmental information.</p>
+          <button data-section="earth">Open Earth</button>
+        </div>
+
+
+        <div class="info-card">
+          <div class="info-icon">🚀</div>
+          <h3>Space</h3>
+          <p>Discover planets, stars, galaxies and cosmic events.</p>
+          <button data-section="space">Explore Space</button>
+        </div>
+
+
+        <div class="info-card">
+          <div class="info-icon">☁️</div>
+          <h3>Weather</h3>
+          <p>Explore weather conditions and atmospheric information.</p>
+          <button data-section="weather">View Weather</button>
+        </div>
+
+
+        <div class="info-card">
+          <div class="info-icon">🛰️</div>
+          <h3>Satellites</h3>
+          <p>Learn about satellites and their role in Earth observation.</p>
+          <button data-section="satellites">View Satellites</button>
+        </div>
+
+
+        <div class="info-card">
+          <div class="info-icon">⚠️</div>
+          <h3>Disasters</h3>
+          <p>Educational visualization of earthquakes, storms and other events.</p>
+          <button data-section="disasters">View Events</button>
+        </div>
+
+
+        <div class="info-card">
+          <div class="info-icon">🤖</div>
+          <h3>AI Explorer</h3>
+          <p>AI-powered educational analysis of space and Earth data.</p>
+          <button data-section="ai">Open AI</button>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- EARTH -->
+    <section id="earth" class="section">
+
+      <div class="page-title">
+        <h2>🌍 Earth Explorer</h2>
+        <p>Explore Earth and its changing environment.</p>
+      </div>
+
+      <div class="large-panel">
+        <div class="panel-icon">🌎</div>
+        <h3>Planet Earth</h3>
+        <p>
+          Universal Space Live will provide educational Earth
+          visualization, geographic information, environmental
+          observations and live data integrations.
+        </p>
+
+        <div class="stats">
+          <div>
+            <strong>1</strong>
+            <span>Planet</span>
+          </div>
+
+          <div>
+            <strong>7</strong>
+            <span>Continents</span>
+          </div>
+
+          <div>
+            <strong>∞</strong>
+            <span>Data</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- SPACE -->
+    <section id="space" class="section">
+
+      <div class="page-title">
+        <h2>🚀 Space Explorer</h2>
+        <p>Explore the universe beyond Earth.</p>
+      </div>
+
+      <div class="space-grid">
+
+        <div class="space-card">
+          <span>☀️</span>
+          <h3>Solar System</h3>
+          <p>Educational exploration of the Sun and planets.</p>
+        </div>
+
+        <div class="space-card">
+          <span>🌌</span>
+          <h3>Galaxies</h3>
+          <p>Discover galaxies and large-scale structures.</p>
+        </div>
+
+        <div class="space-card">
+          <span>⭐</span>
+          <h3>Stars</h3>
+          <p>Learn about stars and stellar evolution.</p>
+        </div>
+
+        <div class="space-card">
+          <span>☄️</span>
+          <h3>Cosmic Events</h3>
+          <p>Explore astronomical events and discoveries.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WEATHER -->
+    <section id="weather" class="section">
+
+      <div class="page-title">
+        <h2>☁️ Weather</h2>
+        <p>Global weather education and visualization.</p>
+      </div>
+
+      <div class="large-panel weather-panel">
+
+        <div class="weather-icon">☀️</div>
+
+        <h3>Global Weather Center</h3>
+
+        <p>
+          Live weather API integration will be connected
+          in the next development stage.
+        </p>
+
+        <div class="weather-status">
+          <span>🌡️ Temperature</span>
+          <span>💨 Wind</span>
+          <span>🌧️ Precipitation</span>
+          <span>☁️ Clouds</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SATELLITES -->
+    <section id="satellites" class="section">
+
+      <div class="page-title">
+        <h2>🛰️ Satellite Explorer</h2>
+        <p>Educational satellite tracking and information.</p>
+      </div>
+
+      <div class="large-panel">
+
+        <div class="panel-icon">🛰️</div>
+
+        <h3>Satellite Network</h3>
+
+        <p>
+          This section will connect to public satellite
+          data sources in the next stage.
+        </p>
+
+        <div class="satellite-status">
+          <span>🛰️ Earth Observation</span>
+          <span>📡 Communications</span>
+          <span>🌦️ Weather</span>
+          <span>🔭 Scientific</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DISASTERS -->
+    <section id="disasters" class="section">
+
+      <div class="page-title">
+        <h2>⚠️ Disaster Monitor</h2>
+        <p>Educational visualization of natural events.</p>
+      </div>
+
+      <div class="disaster-grid">
+
+        <div class="disaster-card">
+          <span>🌋</span>
+          <h3>Volcanoes</h3>
+          <p>Educational volcanic activity information.</p>
+        </div>
+
+        <div class="disaster-card">
+          <span>🌊</span>
+          <h3>Floods</h3>
+          <p>Flood and water-related event information.</p>
+        </div>
+
+        <div class="disaster-card">
+          <span>🌪️</span>
+          <h3>Storms</h3>
+          <p>Storm and atmospheric event visualization.</p>
+        </div>
+
+        <div class="disaster-card">
+          <span>🌎</span>
+          <h3>Earthquakes</h3>
+          <p>Earthquake information and educational maps.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- AI -->
+    <section id="ai" class="section">
+
+      <div class="page-title">
+        <h2>🤖 AI Space Explorer</h2>
+        <p>Artificial intelligence for educational exploration.</p>
+      </div>
+
+      <div class="ai-panel">
+
+        <div class="ai-icon">🤖</div>
+
+        <h3>Universal AI Engine</h3>
+
+        <p>
+          The future AI engine will analyze public Earth,
+          space, weather and satellite data for educational
+          purposes.
+        </p>
+
+        <div class="ai-features">
+          <span>🧠 Data Analysis</span>
+          <span>🔭 Space Analysis</span>
+          <span>🌍 Earth Analysis</span>
+          <span>📊 Prediction Research</span>
+        </div>
+
+        <button id="aiButton" class="primary-button">
+          Activate Educational AI
+        </button>
+
+        <div id="aiMessage" class="ai-message"></div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <h3>🌌 Universal Space Live</h3>
+
+    <p>
+      AI-powered educational platform for Earth,
+      space and universal data exploration.
+    </p>
+
+    <p class="copyright">
+      © 2026 Universal Space Live
+    </p>
+
+  </footer>
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>
