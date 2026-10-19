@@ -8,6 +8,8 @@ import ISS from './pages/ISS'
 import APOD from './pages/APOD'
 import Weather from './pages/Weather'
 import Lessons from './pages/Lessons'
+import LiveMap from './pages/LiveMap'
+import Disaster from './pages/Disaster'
 
 export default function App() {
   const [user, setUser] = useState(null)
@@ -33,6 +35,8 @@ export default function App() {
           <Route path="/apod" element={user ? <APOD /> : <Login setUser={setUser} />} />
           <Route path="/weather" element={user ? <Weather /> : <Login setUser={setUser} />} />
           <Route path="/lessons" element={user ? <Lessons /> : <Login setUser={setUser} />} />
+          <Route path="/livemap" element={user ? <LiveMap /> : <Login setUser={setUser} />} />
+          <Route path="/disaster" element={user ? <Disaster /> : <Login setUser={setUser} />} />
         </Routes>
       </div>
     </Router>
