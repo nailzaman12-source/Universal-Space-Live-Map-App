@@ -10,7 +10,6 @@ import Weather from './pages/Weather'
 import Lessons from './pages/Lessons'
 import LiveMap from './pages/LiveMap'
 import Disaster from './pages/Disaster'
-
 export default function App() {
   const [user, setUser] = useState(null)
   useEffect(() => {
