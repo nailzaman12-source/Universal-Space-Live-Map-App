@@ -1,60 +1,75 @@
 import { Link } from 'react-router-dom'
-import { Rocket, BookOpen, Zap, Globe } from 'lucide-react'
 
 export default function Home() {
+  const features = [
+    { icon: '📡', title: 'Real-time ISS', desc: 'Track the International Space Station live around Earth' },
+    { icon: '🖼️', title: 'NASA Imagery', desc: "Daily astronomy pictures from NASA APOD" },
+    { icon: '🗺️', title: 'Live Map', desc: 'ISS position with city, country and map view' },
+    { icon: '🚨', title: 'Disaster Alerts', desc: 'Global earthquake monitoring and safety data' },
+    { icon: '⛅', title: 'Weather', desc: 'Real-time weather for any city worldwide' },
+    { icon: '📚', title: 'Space Lessons', desc: 'Learn space science with interactive lessons' }
+  ]
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 to-purple-900">
-      <div className="max-w-7xl mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-6xl font-bold text-white mb-4">
-            🌌 Explore Earth
-          </h1>
-          <h1 className="text-6xl font-bold text-white mb-6">
-            Discover Space
-          </h1>
-          <p className="text-2xl text-blue-200 mb-8">
-            Learn with AI - Real-time astronomy & gamified learning
+    <div className="min-h-screen">
+      <section className="relative overflow-hidden px-4 pt-16 pb-20 md:pt-24 md:pb-28">
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <p className="inline-block text-sm font-semibold tracking-widest text-blue-200 uppercase mb-4 px-4 py-1 rounded-full bg-white/10 border border-white/20">
+            Universal Space Live
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Link to="/login" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+            Explore Earth.
+            <br />
+            <span className="bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
+              Discover Space.
+            </span>
+          </h1>
+          <p className="text-lg md:text-xl text-blue-100/90 max-w-2xl mx-auto mb-10">
+            Real-time ISS tracking, NASA images, weather, disaster alerts and space education — in one app.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/login" className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-lg">
               Get Started Free
             </Link>
-            <button className="bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100">
-              Learn More
-            </button>
+            <Link to="/dashboard" className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-2xl font-bold text-lg border border-white/30">
+              Open Dashboard
+            </Link>
           </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-8 text-center">
-            <Rocket className="text-blue-400 mb-4 mx-auto" size={50} />
-            <h3 className="text-white font-bold text-xl mb-2">Real-time Data</h3>
-            <p className="text-blue-200">NASA photos & space events</p>
-          </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-8 text-center">
-            <BookOpen className="text-blue-400 mb-4 mx-auto" size={50} />
-            <h3 className="text-white font-bold text-xl mb-2">Learn & Grow</h3>
-            <p className="text-blue-200">Interactive space science</p>
-          </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-8 text-center">
-            <Zap className="text-blue-400 mb-4 mx-auto" size={50} />
-            <h3 className="text-white font-bold text-xl mb-2">Achievements</h3>
-            <p className="text-blue-200">Unlock badges & rewards</p>
-          </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-8 text-center">
-            <Globe className="text-blue-400 mb-4 mx-auto" size={50} />
-            <h3 className="text-white font-bold text-xl mb-2">Global Access</h3>
-            <p className="text-blue-200">Available worldwide</p>
+      <section className="px-4 pb-20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
+            Everything in one place
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {features.map((f) => (
+              <div key={f.title} className="rounded-2xl p-6 bg-white/10 backdrop-blur-md border border-white/15 shadow-lg">
+                <div className="text-4xl mb-3">{f.icon}</div>
+                <h3 className="text-white font-bold text-lg mb-1">{f.title}</h3>
+                <p className="text-blue-100/80 text-sm leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
+      </section>
 
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-white mb-8">Ready to Start?</h2>
-          <Link to="/login" className="inline-block bg-white text-blue-900 px-12 py-5 rounded-lg font-bold text-xl hover:bg-gray-100">
-            Sign Up Now - It's Free! ✨
+      <section className="px-4 pb-24">
+        <div className="max-w-3xl mx-auto rounded-3xl bg-gradient-to-r from-indigo-600/80 to-purple-600/80 border border-white/20 p-8 md:p-12 text-center shadow-2xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+            Ready to explore the universe?
+          </h2>
+          <p className="text-blue-100 mb-8">Free to start. No credit card required.</p>
+          <Link to="/login" className="inline-block bg-white text-indigo-900 px-10 py-4 rounded-2xl font-bold text-lg">
+            Sign Up Now
           </Link>
         </div>
-      </div>
+      </section>
+
+      <footer className="text-center text-blue-200/50 text-xs pb-8">
+        Universal Space Live · Education · Space · Safety
+      </footer>
     </div>
   )
 }
