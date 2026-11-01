@@ -5,6 +5,9 @@ import Home from './pages/Home'
 import Universe from './pages/Universe'
 import NasaPrograms from './pages/NasaPrograms'
 import Login from './pages/Login'
+import Terms from './pages/Terms'
+import Privacy from './pages/Privacy'
+import About from './pages/About'
 import Dashboard from './pages/Dashboard'
 import ISS from './pages/ISS'
 import APOD from './pages/APOD'
@@ -41,6 +44,10 @@ export default function App() {
           <Route path="/disaster" element={user ? <Disaster /> : <Login setUser={setUser} />} />
                   <Route path="/universe" element={user ? <Universe /> : <Login setUser={setUser} />} />
           <Route path="/nasa-programs" element={user ? <NasaPrograms /> : <Login setUser={setUser} />} />
+        
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </Router>
