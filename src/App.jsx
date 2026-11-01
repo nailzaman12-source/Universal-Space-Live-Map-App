@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
+import Universe from './pages/Universe'
+import NasaPrograms from './pages/NasaPrograms'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import ISS from './pages/ISS'
@@ -37,6 +39,8 @@ export default function App() {
           <Route path="/lessons" element={user ? <Lessons /> : <Login setUser={setUser} />} />
           <Route path="/livemap" element={user ? <LiveMap /> : <Login setUser={setUser} />} />
           <Route path="/disaster" element={user ? <Disaster /> : <Login setUser={setUser} />} />
+                  <Route path="/universe" element={user ? <Universe /> : <Login setUser={setUser} />} />
+          <Route path="/nasa-programs" element={user ? <NasaPrograms /> : <Login setUser={setUser} />} />
         </Routes>
       </div>
     </Router>
