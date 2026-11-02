@@ -3,11 +3,13 @@ import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Universe from './pages/Universe'
+import Starlink from './pages/Starlink'
 import NasaPrograms from './pages/NasaPrograms'
 import Login from './pages/Login'
 import Terms from './pages/Terms'
 import Privacy from './pages/Privacy'
 import About from './pages/About'
+import Support from './pages/Support'
 import Dashboard from './pages/Dashboard'
 import ISS from './pages/ISS'
 import APOD from './pages/APOD'
@@ -48,6 +50,8 @@ export default function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />
+                  <Route path="/starlink" element={user ? <Starlink /> : <Login setUser={setUser} />} />
+                  <Route path="/support" element={<Support />} />
         </Routes>
       </div>
     </Router>

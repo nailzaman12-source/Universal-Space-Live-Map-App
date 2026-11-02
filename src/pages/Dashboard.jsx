@@ -9,6 +9,7 @@ export default function Dashboard({ user }) {
     { to: '/lessons', title: 'Space Lessons', desc: 'Learn space science', icon: '📚', gradient: 'from-orange-500 to-amber-500' },
     { to: '/livemap', title: 'Live Map', desc: 'ISS + city + disaster alerts', icon: '🗺️', gradient: 'from-indigo-600 to-blue-500' },
     { to: '/disaster', title: 'Disaster Management', desc: 'Live earthquake alerts', icon: '🚨', gradient: 'from-red-600 to-rose-500' },
+    { to: '/support', title: 'Support USL', desc: 'Optional donate — app stays free', icon: '💚', gradient: 'from-emerald-600 to-green-700' },
     { to: '/universe', title: 'Universe Map', desc: 'Sky map + cosmic knowledge', icon: '🌌', gradient: 'from-violet-600 to-fuchsia-500' },
     { to: '/nasa-programs', title: 'NASA Programs', desc: 'Missions and education', icon: '🚀', gradient: 'from-sky-600 to-blue-700' }
   ]
