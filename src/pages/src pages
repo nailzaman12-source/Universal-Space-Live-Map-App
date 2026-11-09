@@ -1,0 +1,24 @@
+import { Link } from 'react-router-dom'
+
+export default function Support() {
+  return (
+    <div className="min-h-screen p-4 md:p-8">
+      <div className="max-w-2xl mx-auto">
+        <h1 className="text-3xl font-bold text-white mb-1">Support & Payment</h1>
+        <p className="text-blue-200 mb-6">Optional — USL stays free</p>
+        <div className="bg-white/10 rounded-2xl p-5 mb-6 text-blue-50 text-sm">
+          Created by <strong className="text-white">Noorzaman</strong>, Chenab Nagar, Pakistan.
+        </div>
+        <h2 className="text-white font-bold mb-3">Easypaisa</h2>
+        <div className="bg-white rounded-2xl p-5 mb-5">
+          <p className="text-gray-500 text-xs font-bold">ACCOUNT TITLE</p>
+          <p className="text-gray-900 font-bold text-lg">Noor Zaman</p>
+          <p className="text-gray-500 text-xs font-bold mt-4">MOBILE ACCOUNT</p>
+          <p className="text-gray-900 font-bold text-2xl">0309-5804082</p>
+        </div>
+        <p className="text-amber-100 text-sm mb-6">Reference: USL Support</p>
+        <Link to="/dashboard" className="block text-center text-cyan-300">Dashboard</Link>
+      </div>
+    </div>
+  )
+}
