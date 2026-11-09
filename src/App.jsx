@@ -55,5 +55,8 @@ export default function App() {
         </Routes>
       </div>
     </Router>
-  )
+    
+  )<Route path="/starlink" element={user ? <Starlink /> : <Login setUser={setUser} />} />
+    
 }
+import Starlink from './pages/Starlink'
